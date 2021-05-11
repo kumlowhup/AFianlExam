@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A瓣网</title>
+    <link rel="icon" href="./favicon.ico">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/input.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/dynamic.css">
+    <link rel="stylesheet" href="./css/myalert.css">
+</head>
+
+<body>
+
+    <!-- 登录部分 -->
+    <div class="logincover">
+        <div class="loginPage">
+            <div class="closebtn">x</div>
+            <h1>账号登录</h1>
+            <div class="inputBox">
+                <label for="username" class="userlabel">账号</label>
+                <input type="username" id="username" class="userinput">
+                <!-- 实时反馈信息的盒子 -->
+                <div class="fbInfo"></div>
+            </div>
+            <div class="inputBox">
+                <label for="password" class="userlabel">密码</label>
+                <input type="password" id="password" class="userinput">
+                <!-- 实时反馈信息的盒子 -->
+                <div class="fbInfo"></div>
+            </div>
+            <!-- 实时反馈信息的盒子 -->
+            <div class="fbInfo"></div>
+
+            <!-- 注册链接 -->
+            <div class="linkwrap">
+                还没有账号？<a href="javascript:;" id="toRegister">立即注册！</a>
+            </div>
+
+
+            <button id="loginbtn">确定</button>
+
+        </div>
+    </div>
+
+
+    <!-- header部分 -->
+    <header class="sticky_header">
+        <div class="header_inner">
+
+            <img src="./img/A.png" alt="A图标">
+            <div class="header_title">
+                A瓣
+            </div>
+
+            <!-- header导航栏 -->
+            <div class="navwrap">
+                <a href="#" class="nav-link nav-link-active">首页</a>
+                <a href="javascript:;" class="nav-link">动态</a>
+                <a href="./space.html" class="nav-link">空间</a>
+                <a href="./myAlbum.html" class="nav-link">相册</a>
+            </div>
+
+
+            <!-- header右侧 -->
+            <div class="header_right">
+                <!-- 用户名称 -->
+                <div>
+                    <a href="javascript:;" id="name-link">未登录</a>
+                </div>
+                <!-- 用户头像 -->
+                <div class="header_avatawrap" id="headerAvata">
+
+                    <div class="avata_img_wrap">
+                        <!-- 未登录默认为akarin -->
+                        <img src="./img/akarin.jpg" alt="头像" id="avatarPhoto">
+                    </div>
+
+                    <div class="userpage">
+                        <div onclick="document.getElementById('avatarPhoto').click();" id="userpageBtn">登录</div>
+                        <div class="signout">退出登录</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- 页面主要部分 -->
+    <div class="page_wraper">
+        <div class="container">
+            <div class="col-2" style="transform: translateY(150px);">
+                <ul class="right_wrap">
+                    <li onclick="window.location.href='./space.html'">个人主页</li>
+                    <li onclick="window.location.href='./changePerInfo.html'">修改密码</li>
+                    <li onclick="window.location.href='./changePerInfo.html#updateAvater'">更新头像</li>
+                    <li onclick="window.location.href='#dynamicContent'">发送新动态</li>
+                </ul>
+            </div>
+
+            <!-- 动态 -->
+            <div class="col-1">
+                <div class="recent_dynamic">
+                    A瓣动态
+                </div>
+                
+                <div class="search_dynamic_wrap">
+                    <input type="text" class="searchDynamic" placeholder="搜索动态">
+                    <button id="searchDynamic">确定</button>
+                    <a href="#dynamicContent" class="sendDynamic">发送新动态</a>
+                </div>
+
+                <ul id="navList">
+                    <li>上一页</li>
+                    <li>当前第1页</li>
+                    <li>下一页</li>
+                    <li>共10页，跳转至<input type="text">页</li>
+                </ul>
+
+                <ul id="dynamicList">
+                    <!-- <li>
+                        <div class="list_item_picture">
+                            <img src="http://www.rushmc.top/c0a167e5-5bc2-46a6-8806-dd18ad9c356d.jpg" alt="动态图片"
+                                class="dynamic_photo">
+                            <a href="javascript:;" class="blog_title">动态测试-标题</a>
+                            <a class="name_link">测试用户名</a>
+                            <div class="timeBox">2021年04月27号07:27:33
+                                <a class="del_dy" display="none">删除</a>
+                            </div>
+                            <div class="blog_summary">
+                                内容简介内容简介内容简介内容简介内容简介内容简介内容
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+                <div class="form_dynamic">
+                    <h1 class="blog_title">发动态</h1>
+                    <br>
+                    <input type="text" id="dynamicTitle" placeholder="标题">
+                    <textarea name="dynamicContent" id="dynamicContent" placeholder="动态内容(点击上传图片后按住ctrl不放可选择多张图片)"></textarea>
+                    <div class="photo_preview">
+                        <!-- <img src="./img/akarin.jpg" alt="图片预览"> -->
+                    </div>
+                    <a href="javascript:;" class="input_file">
+                        上传图片
+                        <input type="file" accept="image/png, image/jpg, image/jpeg, image/gif" id="upload"
+                            multiple="multiple">
+                    </a>
+                    <button id="send_dynamic_btn" class="input_file">确定</button>
+                </div>
+
+
+
+                </textarea>
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/lowIEjudge.js"></script>
+    <script src="./js/api/get.js"></script>
+    <script src="./js/api/post.js"></script>
+    <script src="./js/inputcheck.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="./js/login_status.js"></script>
+    <script src="./js/untils/timeOperator.js"></script>
+    <script src="./js/untils/appendDynamic.js"></script>
+    <script src="./js/dynamicNavConstructor.js"></script>
+    <script src="./js/untils/myAlert.js"></script>
+</body>
+
+</html>

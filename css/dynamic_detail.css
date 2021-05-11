@@ -1,0 +1,229 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  font-family: "Microsoft YaHei", "微软雅黑", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  list-style: none;
+}
+
+input {
+  outline: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #8e959a;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  background-color: rgb(246, 246, 246);
+}
+
+.dynamic_box,
+.comment_box {
+  width: 100%;
+  padding: 30px 20px;
+  background-color: #fff;
+  height: auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+title {
+  display: block;
+  width: 100%;
+  font-size: 30px;
+  text-align: center;
+}
+
+.page_wraper {
+  padding: 62px 0;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  padding: 80px 100px 0;
+  width: 1200px;
+  height: 100%;
+}
+
+.col-1 {
+  display: block;
+  width: 66%;
+  transition: all .3s ease;
+}
+
+.col-2 {
+  display: block;
+  float: right;
+  width: 33%;
+}
+
+.publish_time {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.author {
+  text-align: center;
+}
+
+.dynamic_box img {
+  width: 40%;
+  margin: 10px;
+}
+
+.dynamic_content {
+  width: 100%;
+  word-break: break-all;
+}
+
+/* 发评论的框 */
+.form_comment {
+  padding: 30px 20px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+}
+
+/* 发评论的文本框 */
+#commentContent {
+  width: 100%;
+  height: 85px;
+  outline: 0;
+  border: 0;
+  resize: none;
+}
+
+/* 发评论按钮 */
+#send_comment_btn {
+  background: #d0eeff;
+  border: 1px solid #99d3f5;
+  border-radius: 4px;
+  padding: 4px 12px;
+  overflow: hidden;
+  color: #1e88c7;
+}
+
+/* 按钮效果 */
+#send_comment_btn:hover {
+  background: #aadffd;
+  border-color: #78c3f3;
+  color: #004974;
+  text-decoration: none;
+}
+
+
+.commentsBox {
+  border: #000 1px dashed;
+  border-width: 0 0 1px;
+  margin-bottom: 30px;
+}
+
+/* 头像 */
+.commentsBox img {
+  width: 30px;
+  height: 30px;
+  margin: 10px;
+  border-radius: 15px;
+}
+
+/* 用户名 */
+.commentsBox h1 {
+  font-size: 20px;
+}
+
+.commmentSender {
+  display: flex;
+  align-items: center;
+}
+
+.reply_delete {
+  cursor: pointer;
+  color: #8e959a;
+  font-size: 14px;
+}
+
+
+/* 评论内容盒子 */
+.commemtsContent {
+  padding-left: 50px;
+  min-height: 30px;
+}
+
+/* 回复评论的文本框 */
+.replyTextarea {
+  width: 200px;
+  min-height: 50px;
+  resize: none;
+  display: none;
+}
+
+/* 回复按钮 */
+.replyLink {
+  cursor: pointer;
+  font-size: 12px;
+  line-height: 24px;
+  height: 26px;
+  width: 34px;
+  text-align: center;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.replyLink:hover {
+  color: #00a1d6;
+  background-color: #e5e9ef;
+}
+
+.replyBox {
+  min-height: 100px;
+  margin-bottom: 30px;
+  margin-left: 50px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.replyBox .commemtsContent {
+  min-height: 30px;
+}
+
+.replySender {
+  display: -webkit-flex;
+  display: flex;
+  align-items: center;
+}
+
+.replySender h1 {
+  font-size: 15px;
+}
+
+.replySender h1:nth-child(3) {
+  color: blue; 
+}
+
+.backBtn {
+  margin-bottom: 20px;
+}
+
+.backBtn:hover {
+  color: #1e88c7;
+}
+
+.allReply {
+  cursor: pointer;
+  color: #8e959a;
+}
+
+.allReply:hover {
+  color: #1e88c7;
+}

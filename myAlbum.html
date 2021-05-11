@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人相簿</title>
+    <link rel="icon" href="./favicon.ico">
+
+    <link rel="stylesheet" href="./css/myalert.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/myAlbum.css">
+</head>
+
+<body>
+
+    <!-- header部分 -->
+    <header class="sticky_header">
+        <div class="header_inner">
+            <img src="./img/A.png" alt="A图标">
+            <div class="header_title">
+                A瓣
+            </div>
+
+            <!-- header导航栏 -->
+            <div class="navwrap">
+                <a href="./index.html" class="nav-link">首页</a>
+                <a href="./index.html" class="nav-link">动态</a>
+                <a href="./space.html" class="nav-link">空间</a>
+                <a href="#" class="nav-link nav-link-active">相册</a>
+            </div>
+
+
+            <!-- header右侧 -->
+            <div class="header_right">
+                
+                <!-- 用户名称 -->
+                <div>
+                    <a href="javascript:;" id="name-link">未登录</a>
+                </div>
+                <!-- 用户头像 -->
+                <div class="header_avatawrap" id="headerAvata">
+
+                    <div class="avata_img_wrap">
+                        <!-- 未登录默认为akarin -->
+                        <img src="./img/akarin.jpg" alt="头像" id="avatarPhoto">
+                    </div>
+
+                    <div class="userpage">
+                        <div onclick="document.getElementById('avatarPhoto').click();" id="userpageBtn">登录</div>
+                        <div class="signout">退出登录</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <div class="albumPage_wrap">
+        <div class="albumBigTitle">
+            我的个人相册
+        </div>
+        <div class="albumPage">
+            <!-- 这一片注释的代码用来测试相簿的样式 -->
+            <!-- <div class="albumElement">
+                <div class="album_title">
+                    测试相簿标题
+                </div>
+                <div class="img_display">
+                    <img src="./img/akarin.jpg" alt="相册图片">
+                    <div class="imgAccount">共n张图片</div>
+                </div>
+            </div> -->
+            <div class="albumElement createAlbumLink">
+                创建新相册
+            </div>
+        </div>
+
+    </div>
+
+    <!-- 使用页面遮罩层 -->
+    <div class="pageShade">
+
+        <div class="createAlbum">
+            <!-- 返回按钮 -->
+            <siv class="back">&lt;&nbsp;返回</siv>
+            <div style="font-size: 30px; text-align: center;">创建相册</div>
+            <div class="createAlbumForm">
+                <label for="albumTitleInput">相册标题名</label>
+
+                <input type="text" id="albumTitleInput">
+
+                <button id="createAlbumBtn">确定</button>
+            </div>
+        </div>
+        <div class="album_detail">
+            <siv class="back2">&lt;&nbsp;返回</siv>
+            <div class="album_detail_title">
+                相册标题名
+            </div>
+            <div class="pictures_wrap">
+                <div class="pictures">
+                    <div class="appendPicture">点击上传不大于1M的图片</div>
+                    <input type="file" style="display: none;" accept="image/*" multiple="multiple">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./js/api/post.js"></script>
+    <script src="./js/api/get.js"></script>
+    <script src="./js/untils/myAlert.js"></script>
+    <script src="./js/login_status.js"></script>
+    <script src="./js/myAlbum.js"></script>
+</body>
+
+</html>

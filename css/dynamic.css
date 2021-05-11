@@ -1,0 +1,81 @@
+.list_item,
+.list_item_picture {
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  transition: all .25s ease;
+}
+
+.list_item:hover,
+.list_item_picture:hover {
+  transform: translateY(-5px);
+}
+
+.list_item_picture {
+  padding: 18px 24px 13px;
+  height: 200px;
+}
+
+.list_item {
+  padding: 30px;
+  height: 150px;
+}
+
+.blog_title {
+  color: #333;
+  display: block;
+  line-height: 24px;
+  height: 24px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.dynamic_photo {
+  float: right;
+  height: 100%;
+}
+
+.blog_summary {
+  font-size: 14px;
+  color: #8a8a8a;
+  height: 20px;
+  /* 省略效果 */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.name_link {
+  display: block;
+  font-size: 15px;
+  width: 100px;
+  /* 省略效果 */
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.timeBox {
+  font-size: 11px;
+  margin-bottom: 10px;
+}
+
+.list_item_picture:hover,
+.list_item:hover {
+  background-color: #fcfcfc;
+}
+
+.list_item_picture:hover .blog_title,
+.list_item:hover .blog_title {
+  color: #00c3ff;
+}
+
+/* 删除动态链接 */
+.del_dy {
+  font-size: 9px;
+}

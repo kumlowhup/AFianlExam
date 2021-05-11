@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动态详情页</title>
+    <!-- 设置网站小图标 -->
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./css/dynamic_detail.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/myalert.css">
+</head>
+
+<body>
+    <!-- header部分 -->
+    <header class="sticky_header">
+        <div class="header_inner">
+
+            <img src="./img/A.png" alt="A图标">
+            <div class="header_title">
+                A瓣
+            </div>
+
+            <!-- header导航栏 -->
+            <div class="navwrap">
+                <a href="./index.html" class="nav-link">首页</a>
+                <a href="#" class="nav-link nav-link-active">动态</a>
+                <a href="./space.html" class="nav-link">空间</a>
+                <a href="./myAlbum.html" class="nav-link">相簿</a>
+            </div>
+
+
+            <!-- header右侧 -->
+            <div class="header_right">
+                <!-- 用户名称 -->
+                <div>
+                    <a href="javascript:;" id="name-link">未登录</a>
+                </div>
+                <!-- 用户头像 -->
+                <div class="header_avatawrap" id="headerAvata">
+                    <div class="avata_img_wrap">
+                        <!-- 未登录默认为akarin -->
+                        <img src="./img/akarin.jpg" alt="头像" id="avatarPhoto">
+                    </div>
+                    <div class="userpage">
+                        <button onclick="document.getElementById('avatarPhoto').click();" id="userpageBtn">登录</button>
+
+                        <div class="signout">退出登录</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- 动态部分 -->
+    <div class="page_wraper">
+        <div class="container">
+            <div class="col-2">
+                <div class="form_comment">
+                    <h1 class="blog_title">评论</h1>
+                    <textarea name="commentContent" id="commentContent" placeholder="发句友善的评论吧"></textarea>
+                    <button id="send_comment_btn">确定</button>
+                </div>
+
+                <!-- 评论区部分 -->
+                <div class="comment_box">
+                    <ul>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="col-1">
+                <div class="dynamic_box">
+                    <a href="javascript:;" onclick="window.history.back();" class="backBtn">&lt; 返回</a>
+
+                    <title></title>
+                    <div class="author"></div>
+                    <div class="publish_time"></div>
+                    <div class="dynamic_content">
+
+                    </div>
+                    <div class="imgBox">
+
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <script src="./js/api/get.js"></script>
+    <script src="./js/api/post.js"></script>
+    <script src="./js/untils/myAlert.js"></script>
+    <script src="./js/untils/timeOperator.js"></script>
+    <script src="./js/dynamic_detail.js"></script>
+    <script src="./js/login_status.js"></script>
+</body>
+
+</html>
