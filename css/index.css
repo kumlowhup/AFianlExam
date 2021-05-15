@@ -161,11 +161,10 @@ body {
   width: 700px;
 }
 
-
 /* 搜索动态列表 */
 .search_dynamic_wrap {
   display: flex;
-  margin: 0 0 20px
+  margin: 0 0 20px;
 }
 
 .search_dynamic_wrap input {
@@ -209,7 +208,6 @@ body {
   background-color: rgb(246, 246, 246);
   transition: all 0.15s;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  
 }
 
 /* 标题 */
@@ -276,13 +274,28 @@ body {
   font-size: 16px;
   line-height: 30px;
   margin: 0 10px;
-
 }
 
 #navList li:nth-child(1),
 #navList li:nth-child(3) {
   cursor: pointer;
-  
+}
+
+.page_order {
+  width: 25px;
+  border: 1px solid #000;
+  float: left;
+  text-align: center;
+}
+
+.page_order_selected {
+  color: #fff;
+  background-color: #000;
+}
+
+.page_order_ellipsis {
+  width: 25px;
+  float: left;
 }
 
 
@@ -300,7 +313,6 @@ body {
 }
 
 .photo_preview img {
-
   width: 100%;
 }
 
