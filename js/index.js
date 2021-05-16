@@ -17,10 +17,16 @@ let navList = document.querySelector("#navList");
 inputstyle(username);
 inputstyle(password);
 
+// 登陆页面
+let logincover = document.querySelector(".logincover");
+let loginPage = document.querySelector(".loginPage");
+// 绑定关闭登录页面按钮
 let closebtn = document.querySelector(".closebtn");
 closebtn.addEventListener("click", function () {
   // 点击关闭页面隐藏输入的
-  this.parentNode.parentNode.style.display = "";
+  setTimeout(() => {logincover.style.display = "none";}, 200);
+  
+  loginPage.style.transform = "scale(.6)";
 });
 
 //处理ajax返回的用户信息的回调函数
@@ -55,11 +61,11 @@ function afterLogin(res) {
 
 // 点击header中头像的反应函数
 function loginFun() {
-  let logincover = document.querySelector(".logincover");
-  let loginPage = document.querySelector(".loginPage");
   // 显示隐藏的登录页
   logincover.style.display = "block";
-  loginPage.style.width = "400px";
+  setTimeout(() => {
+    loginPage.style.transform = "scale(1)";
+  }, 100);
 }
 
 // 登录按钮绑定点击事件

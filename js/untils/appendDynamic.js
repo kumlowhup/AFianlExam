@@ -1,6 +1,6 @@
 // 封装的添加动态的方法
 function appendDynamic(resdata, ul) {
-  console.log(resdata);
+  // console.log(resdata);
   let li = document.createElement("li");
   let img = "";
   if (!resdata.title) resdata.title = "无标题";

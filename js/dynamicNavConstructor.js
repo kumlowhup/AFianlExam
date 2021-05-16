@@ -1,11 +1,11 @@
 function dynamicNavConstructor(navList, res, ul) {
   // 页面数量
   let pageAmount = Math.ceil(res.data.length / 10);
-  navList.innerHTML = `<li>&lt; 上一页</li>
+  navList.innerHTML = `<li></li>
     <li class="page_orders">
       <div class="page_order">1</div>
     </li>
-    <li>下一页 &gt; </li>
+    <li></li>
     <li>共${pageAmount}页，跳至 <input type="text" class="jumpPageNum">页</li>`;
   ul.innerHTML = "";
   let pageNowNumber = 1;
@@ -159,7 +159,7 @@ function dynamicNavConstructor(navList, res, ul) {
     }
   };
 
-  // ul改变时触发的函数
+  // ul改变时触发的函数 检查上下翻页按钮是否应该隐藏
   function ulOnchange() {
     if (pageNowNumber == 1) {
       li3.style.display = "block";
@@ -171,5 +171,6 @@ function dynamicNavConstructor(navList, res, ul) {
       li1.style.display = "block";
       li3.style.display = "block";
     }
+    input.value = pageNowNumber;
   }
 }
